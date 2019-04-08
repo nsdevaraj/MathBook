@@ -47,13 +47,21 @@ Learn more about Flex at http://flex.org
   <style type="text/css" media="screen">#flashContent {visibility:hidden}#flashContent {display:block;text-align:left;}</style></head><body><appdata id="appdata" data-apptype="builder" data-hasworksheet="false" data-worksheettitle="Polar_Cartesian_comparison" data-worksheetid="4fc2210b7f016d6d42dbd485" data-hostname="http://localhost:8080">
   </appdata>
   <script type="text/javascript">
+  function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+}
     var swfobjectScript = document.getElementById("appdata");
-    var appType = swfobjectScript.getAttribute("data-apptype");
     var hostName = swfobjectScript.getAttribute("data-hostname");
     var worksheetTitle = swfobjectScript.getAttribute("data-worksheettitle");
     var worksheetid = swfobjectScript.getAttribute("data-worksheetId");
     var username = swfobjectScript.getAttribute("data-username");
-    var hasworksheet = swfobjectScript.getAttribute("data-hasworksheet");
+	 
+    var appType = getUrlVars()["apptype"]  || swfobjectScript.getAttribute("data-apptype"); //builder,player,viewer,liveconnect
+    var hasworksheet = getUrlVars()["sheet"]  ||  swfobjectScript.getAttribute("data-hasworksheet"); // false, true
     // For version detection, set to min. required Flash Player version, or 0 (or 0.0.0), for no version detection.
     var swfVersionStr = "11.1.0";
     // To use express install, set to playerProductInstall.swf, otherwise the empty string.
