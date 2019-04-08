@@ -57,9 +57,9 @@ Learn more about Flex at http://flex.org
     var swfobjectScript = document.getElementById("appdata");
     var hostName = swfobjectScript.getAttribute("data-hostname");
     var worksheetTitle = swfobjectScript.getAttribute("data-worksheettitle");
-    var worksheetid = swfobjectScript.getAttribute("data-worksheetId");
     var username = swfobjectScript.getAttribute("data-username");
 	 
+    var worksheetid = getUrlVars()["id"]  || swfobjectScript.getAttribute("data-worksheetId");
     var appType = getUrlVars()["apptype"]  || swfobjectScript.getAttribute("data-apptype"); //builder,player,viewer,liveconnect
     var hasworksheet = getUrlVars()["sheet"]  ||  swfobjectScript.getAttribute("data-hasworksheet"); // false, true
     // For version detection, set to min. required Flash Player version, or 0 (or 0.0.0), for no version detection.
