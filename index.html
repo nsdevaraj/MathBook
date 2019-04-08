@@ -44,7 +44,7 @@ Learn more about Flex at http://flex.org
 
   <script id="swfobject" type="text/javascript" src="swfobject.js">
   </script>
-  <style type="text/css" media="screen">#flashContent {visibility:hidden}#flashContent {display:block;text-align:left;}</style></head><body><appdata id="appdata" data-apptype="builder" data-worksheettitle="Polar_Cartesian_comparison" data-worksheetid="4fc2210b7f016d6d42dbd485" data-hostname="http://localhost:8080">
+  <style type="text/css" media="screen">#flashContent {visibility:hidden}#flashContent {display:block;text-align:left;}</style></head><body><appdata id="appdata" data-apptype="builder" data-hasworksheet="false" data-worksheettitle="Polar_Cartesian_comparison" data-worksheetid="4fc2210b7f016d6d42dbd485" data-hostname="http://localhost:8080">
   </appdata>
   <script type="text/javascript">
     var swfobjectScript = document.getElementById("appdata");
@@ -53,13 +53,14 @@ Learn more about Flex at http://flex.org
     var worksheetTitle = swfobjectScript.getAttribute("data-worksheettitle");
     var worksheetid = swfobjectScript.getAttribute("data-worksheetId");
     var username = swfobjectScript.getAttribute("data-username");
+    var hasworksheet = swfobjectScript.getAttribute("data-hasworksheet");
     // For version detection, set to min. required Flash Player version, or 0 (or 0.0.0), for no version detection.
     var swfVersionStr = "11.1.0";
     // To use express install, set to playerProductInstall.swf, otherwise the empty string.
     var xiSwfUrlStr = "https://mathdiskwebsite.s3.amazonaws.com/playerProductInstall.swf";
     var flashvars = {};
     flashvars.hostName =hostName;
-    flashvars.hasWorkSheet = "false";
+    flashvars.hasWorkSheet = hasworksheet;
     flashvars.appType = appType; // //builder,player,viewer,liveconnect etc
     flashvars.workSheetId=worksheetid;
     flashvars.workSheetTitle=worksheetTitle;
