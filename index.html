@@ -50,6 +50,9 @@ Learn more about Flex at http://flex.org
     var swfobjectScript = document.getElementById("appdata");
     var appType = swfobjectScript.getAttribute("data-apptype");
     var hostName = swfobjectScript.getAttribute("data-hostname");
+    var worksheetTitle = swfobjectScript.getAttribute("data-worksheettitle");
+    var worksheetid = swfobjectScript.getAttribute("data-worksheetId");
+    var username = swfobjectScript.getAttribute("data-username");
     // For version detection, set to min. required Flash Player version, or 0 (or 0.0.0), for no version detection.
     var swfVersionStr = "11.1.0";
     // To use express install, set to playerProductInstall.swf, otherwise the empty string.
@@ -58,14 +61,18 @@ Learn more about Flex at http://flex.org
     flashvars.hostName =hostName;
     flashvars.hasWorkSheet = "false";
     flashvars.appType = appType; // //builder,player,viewer,liveconnect etc
-    flashvars.workSheetId = "";
-    flashvars.workSheetTitle = "";
+    flashvars.workSheetId=worksheetid;
+    flashvars.workSheetTitle=worksheetTitle;
     flashvars.workSheetName = "";
-    flashvars.exportWidth = "";
-    flashvars.exportHeight = "";
+    flashvars.exportWidth="1478";
+    flashvars.exportHeight="607";
     flashvars.workSheetOwner = "Dev";
-    flashvars.loggedinUser = "Guest";
+    flashvars.cloudEnabled="true";
+    flashvars.isBeta="false";
+    flashvars.loggedinUser="";
     flashvars.providerName = "";
+    flashvars.workSheetScope="pub";
+    flashvars.userToken="";
     flashvars.edmodoViewer = "false";
     flashvars.edmodoUserType = '';//teacher or ''
     flashvars.edmodoGroupNames = "";//"1-Group1:2-Group2" or ''
@@ -96,7 +103,9 @@ Learn more about Flex at http://flex.org
      JavaScript and Flash plug-in support is available. The div is initially hidden so that it doesn't show
      when JavaScript is disabled.
 -->
+<div id="flashContent">
 <object type="application/x-shockwave-flash" id="MathApplication" name="MathApplication" data="MathApplication.swf" width="100%" height="100%" align="middle"><param name="quality" value="high"><param name="bgcolor" value="#ffffff"><param name="allowscriptaccess" value="always"><param name="allowFullScreenInteractive" value="true"><param name="wmode" value="direct"><param name="flashvars" value="hostName=http://localhost:8080&amp;hasWorkSheet=false&amp;appType=builder&amp;workSheetId=&amp;workSheetTitle=&amp;workSheetName=&amp;exportWidth=&amp;exportHeight=&amp;workSheetOwner=Guest&amp;loggedinUser=Guest&amp;providerName=Mathdisk&amp;edmodoViewer=false&amp;edmodoUserType=&amp;edmodoGroupNames="></object>
+</div>
 
 <noscript>
   <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="100%" height="100%" id="MathApplication">
