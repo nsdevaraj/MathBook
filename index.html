@@ -1,59 +1,41 @@
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><!--
-Smart developers always View Source.
-
-This application was built using Adobe Flex, an open source framework
-for building rich Internet applications that get delivered via the
-Flash Player or to desktops via Adobe AIR.
-
-Learn more about Flex at http://flex.org
-// --><head>
-  <title>Mathdisk Builder</title>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Math Book</title>
   <meta name="google" value="notranslate">
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <!-- Include CSS to eliminate any default margins/padding and set the height of the html element and
-       the body element to 100%, because Firefox, or any Gecko based browser, interprets percentage as
-       the percentage of the height of its parent container, which has to be set explicitly.  Fix for
-       Firefox 3.6 focus border issues.  Initially, don't display flashContent div so it won't show
-       if JavaScript disabled.
-  -->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
   <style type="text/css" media="screen">
     html, body {
       height: 100%;
-    }
-
+    } 
     body {
       margin: 0;
       padding: 0;
       overflow: auto;
       text-align: center;
       background-color: #ffffff;
-    }
-
+    } 
     object:focus {
       outline: none;
-    }
-
+    } 
     #flashContent {
       display: none;
     }
-  </style>
+  </style> 
 
-  <!-- Enable Browser History by replacing useBrowserHistory tokens with two hyphens -->
-  <!-- BEGIN Browser History required section -->
-  <!-- END Browser History required section -->
-
-  <script id="swfobject" type="text/javascript" src="swfobject.js">
-  </script>
-  <style type="text/css" media="screen">#flashContent {visibility:hidden}#flashContent {display:block;text-align:left;}</style></head><body><appdata id="appdata" data-apptype="builder" data-hasworksheet="false" data-worksheettitle="save.html" data-worksheetid="test.json" data-hostname="https://nsdevaraj.github.io">
+  <script id="swfobject" type="text/javascript" src="swfobject.js"></script>
+  <style type="text/css" media="screen">#flashContent {visibility:hidden}#flashContent {display:block;text-align:left;}</style>
+  </head>
+  <body> 
+  <appdata id="appdata" data-apptype="builder" data-hasworksheet="false" data-worksheettitle="save.html" data-worksheetid="test.json" data-hostname="https://nsdevaraj.github.io">
   </appdata>
   <script type="text/javascript">
-  function getUrlVars() {
-    var vars = {};
-    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
-        vars[key] = value;
-    });
-    return vars;
-}
+	function getUrlVars() {
+		var vars = {};
+		var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+			vars[key] = value;
+		});
+		return vars;
+	}
     var swfobjectScript = document.getElementById("appdata");
     var hostName = swfobjectScript.getAttribute("data-hostname");
     var worksheetTitle = swfobjectScript.getAttribute("data-worksheettitle");
@@ -106,16 +88,14 @@ Learn more about Flex at http://flex.org
     // JavaScript enabled so display the flashContent div in case it is not replaced with a swf object.
     swfobject.createCSS("#flashContent", "display:block;text-align:left;");
   </script>
-
-
-<!-- SWFObject's dynamic embed method replaces this alternative HTML content with Flash content when enough
-     JavaScript and Flash plug-in support is available. The div is initially hidden so that it doesn't show
-     when JavaScript is disabled.
--->
+ 
 <div id="flashContent">
-<object type="application/x-shockwave-flash" id="MathApplication" name="MathApplication" data="MathApplication.swf" width="100%" height="100%" align="middle"><param name="quality" value="high"><param name="bgcolor" value="#ffffff"><param name="allowscriptaccess" value="always"><param name="allowFullScreenInteractive" value="true"><param name="wmode" value="direct"><param name="flashvars" value="hostName=https://nsdevaraj.github.io&amp;hasWorkSheet=false&amp;appType=builder&amp;workSheetId=test.json&amp;workSheetTitle=&amp;workSheetName=&amp;exportWidth=&amp;exportHeight=&amp;workSheetOwner=Guest&amp;loggedinUser=Guest&amp;providerName=Mathdisk&amp;edmodoViewer=false&amp;edmodoUserType=&amp;edmodoGroupNames="></object>
+<object type="application/x-shockwave-flash" id="MathApplication" name="MathApplication" data="MathApplication.swf" width="100%" height="100%" align="middle">
+<param name="quality" value="high"><param name="bgcolor" value="#ffffff"><param name="allowscriptaccess" value="always">
+<param name="allowFullScreenInteractive" value="true"><param name="wmode" value="direct">
+<param name="flashvars" value="hostName=https://nsdevaraj.github.io&amp;hasWorkSheet=false&amp;appType=builder&amp;workSheetId=test.json&amp;workSheetTitle=&amp;workSheetName=&amp;exportWidth=&amp;exportHeight=&amp;workSheetOwner=Guest&amp;loggedinUser=Guest&amp;providerName=Mathdisk&amp;edmodoViewer=false&amp;edmodoUserType=&amp;edmodoGroupNames=">
+</object>
 </div>
-
 <noscript>
   <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="100%" height="100%" id="MathApplication">
     <param name="movie" value="MathApplication.swf"/>
@@ -146,7 +126,5 @@ Learn more about Flex at http://flex.org
     </object>
     <!--<![endif]-->
   </object>
-</noscript>
-
-
+</noscript> 
 </body></html>
